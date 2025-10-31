@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+
+  <!-- 1. Replace this with the title of your extension. This will Show in the extensions menu-->
+  <_name>Pneumatics Router</_name>
+  
+  <!-- 2. Fill this in. It ensures that your extension has a unique ID -->
+  <id>org.purdueRaadLab.pneumatics_router</id>
+
+  <!-- 3. Show the relative path to your extension. For example, `~/.config/inkscape/extensions/template.py` would be `template.py`-->
+  <dependency type="executable" location="extensions">./PneumaticsRouter/pneurouter_offset_only.py</dependency>
+
+  <param name="width" type="float" min="0.1" max="100" gui-text="Channel Width (mm):">3</param>
+  <!--param name="fillet" type="float" min="0.51" max="10" gui-text="Fillet Radius (% of channel width):">3</param-->
+  <!--param name="width"
+    type="float"
+    gui-text="Ribbon width:"
+    min="0"
+    default="10.0"
+    units="mm" />
+  </param> -->
+
+  
+  <effect needs-live-preview="false">
+    <object-type>all</object-type>
+    <effects-menu>
+      <submenu name="Modify Path" />
+    </effects-menu>
+  </effect>
+
+  <script>
+    <!-- 5. Same as #4 -->
+    <command location="inx" interpreter="python">pneurouter.py</command>
+  </script>
+</inkscape-extension>

@@ -1,4 +1,4 @@
-Sort features from different layers and colors:
+**To do:** Sort features from different layers and colors:
 1. base body
      - solid body boundary
      - lines to cut from a larger piece

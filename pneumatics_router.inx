@@ -9,7 +9,8 @@
 
   <!-- 3. Show the relative path to your extension. For example, `~/.config/inkscape/extensions/template.py` would be `template.py`-->
   <dependency type="executable" location="extensions">./PneumaticsRouter/pneurouter_offset_only.py</dependency>
-
+<param name="tab" type="notebook">
+<page name="diagram_tab" gui-text="Modify Schematics">
   <param name="width" type="float" min="0.1" max="100" gui-text="Channel Width (mm):">3</param>
   <!--param name="fillet" type="float" min="0.51" max="10" gui-text="Fillet Radius (% of channel width):">3</param-->
   <!--param name="width"
@@ -19,7 +20,12 @@
     default="10.0"
     units="mm" />
   </param> -->
-
+  </page>
+  <page name="export_instruction" gui-text="Export">
+  <param name="directory" type="path" mode="folder" gui-text="Directory"></param>
+  <param name="fn" type="string" gui-text="File Name"></param>
+  </page>
+</param>
   
   <effect needs-live-preview="false">
     <object-type>all</object-type>
